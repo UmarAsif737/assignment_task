@@ -140,9 +140,10 @@
 
                     if (fail == 1) {
                         document.querySelector("#result").innerHTML = "Failed";
-                        image[i].removeEventListener("click",);
+                        location.replace("/fail.html")
                     } else if (count == 3) {
                         document.querySelector("#result").innerHTML = "Success";
+                        location.replace("/success.html")
 
                     }
                 });
