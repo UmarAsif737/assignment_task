@@ -18,11 +18,17 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            font-size: 22px;
+        }
+
+        #message {
+            font-weight: bold;
+            font-size: 18px;
         }
 
         .capctha {
             width: 480px;
-            height: 100px;
+            height: 170px;
             border: 3px solid rgba(27, 31, 35, .15);
 
             background-color: rgb(188, 188, 188);
@@ -74,6 +80,7 @@
         <div class="capctha">
             <div class="array">
                 <p id="randArr"></p>
+                <p id="message"></p>
                 <div class="popContainer">
                     <p id="firstPop"></p>
                     <p id="secPop"></p>
@@ -115,6 +122,8 @@
             let btn = document.querySelector("#btn");
             btn.style.display = "none";
             const randArr = getRandomArray();
+            document.querySelector("#message").innerHTML = "Please Select these Numbers from the Picture Below";
+
             document.querySelector("#firstPop").innerHTML = randArr.pop();
             document.querySelector("#secPop").innerHTML = randArr.pop();
             document.querySelector("#thirdPop").innerHTML = randArr.pop();
